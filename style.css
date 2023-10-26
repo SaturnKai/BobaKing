@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
+*,
+*::before,
+*::after {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1d191f;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-inline: 180px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.tab {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.tab:hover {
+    color: #a1a1a1;
+}
+
+.tab.selected {
+    color: #eb703b;
+}
+
+/* Main */
+
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-inline: 180px;
+}
+
+.left {
+    max-width: 500px;
+}
+
+.right {
+    position: relative;
+}
+
+.tooltip {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.8rem;
+    position: absolute;
+}
+
+.t-1 {
+    top: 0;
+    right: 80px;
+}
+
+.t-2 {
+    bottom: 100px;
+    left: 0;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #c3c3c3;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.menu-button {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+
+    background: #ff5151;
+    border-radius: 8px;
+    padding: 12px 20px;
+    box-shadow: 4px 0px 30px 5px #ff3a3a55;
+
+    transition: background 80ms ease;
+}
+
+.menu-button:hover {
+    background: #e44747;
+}
+
+.big-image {
+    width: 500px;
+}
+
+.separator {
+    margin: 80px 0px;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* Featured Boba */
+
+.featured-boba {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.featured {
+    width: 500px;
+}
+
+.image {
+    width: 500px;
+    border-radius: 12px;
+}
+
+/* Utils */
+
+.text-yellow {
+    color: #fcbb15;
+}
+
+.text-green {
+    color: #2dc86f;
+}
