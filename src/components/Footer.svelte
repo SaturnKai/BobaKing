@@ -1,12 +1,10 @@
 <script lang="ts">
-    export let icon: string;
+    export let page: string;
 </script>
 
-{#if icon}
 <div class="icon-splash">
-    {icon}
+    {page}
 </div>
-{/if}
 
 <footer>
     <div></div>
