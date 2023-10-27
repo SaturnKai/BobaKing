@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
 *,
 *::before,
 *::after {
+	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body {
+	background: #1d191f;
+}
+
+:root {
+	color-scheme: dark;
 }
