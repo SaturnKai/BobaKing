@@ -14,17 +14,22 @@
 
 <style>
 	.button {
+		cursor:pointer;
 		font-size: 1rem;
 		font-weight: bold;
 		color: #fff;
 		text-decoration: none;
 		background: var(--color);
-		border-radius: 8px;
+		border-radius: 1rem;
 		padding: 12px 20px;
 		box-shadow: 4px 0px 30px 5px var(--shadow);
 		transition: background 80ms ease;
 		outline: none;
 		border: none;
+	}
+
+	.fa-solid {
+		margin-left: 0.4rem;
 	}
 
 	.button:hover {

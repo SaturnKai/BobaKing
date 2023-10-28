@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Separator from 'components/Separator.svelte';
 	import Input from 'components/Input.svelte';
+	import Button from 'components/Button.svelte';
 </script>
 
 <div class="main-content">
@@ -12,6 +13,9 @@
 		<Input icon="envelope" placeholder="Email Address" type="email" />
 	</div>
 	<Input icon="pencil" placeholder="Something thoughtful" type="textarea" />
+	<div class="button-container">
+		<Button color="#8951FF" shadow="#623AFF55" hover="#703fd9" icon="paper-plane">Send</Button>
+	</div>
 </div>
 
 <style>
@@ -42,5 +46,13 @@
 		grid-template-rows: 1fr;
 		grid-column-gap: 1rem;
 		grid-row-gap: 0px;
+	}
+
+	.button-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+
 	}
 </style>
