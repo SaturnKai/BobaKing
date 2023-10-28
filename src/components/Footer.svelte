@@ -1,5 +1,8 @@
 <script lang="ts">
     export let page: string;
+    import facts from "$lib/facts";
+
+    let fact = facts[Math.floor(Math.random() * facts.length)]
     let icon = "crown";
     $: {
         switch(page) {
@@ -9,7 +12,10 @@
             default: icon = "crown"; break;
         }
     }
-    
+
+    function randomFact() {
+        fact = facts[Math.floor(Math.random() * facts.length)]
+    }
 
 </script>
 
@@ -19,10 +25,10 @@
 
 <footer>
     <div></div>
-    <div class="facts">
+    <button class="facts" on:click={()=>randomFact()}>
         <h1>Did you know?</h1>
-        <span>Boba is super dope and cool</span>
-    </div>
+        <span>{fact}</span>
+    </button>
     <div class="socials">
         Instagram
     </div>
@@ -54,6 +60,7 @@
     }
 
     .facts {
+        all: unset;
         cursor: pointer;
         text-align: center;
     }

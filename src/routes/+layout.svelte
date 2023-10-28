@@ -11,3 +11,8 @@
 	<slot />
 </main>
 <Footer page={$page.url.pathname} />
+<style>
+	main {
+		min-height: 80vh;
+	}
+</style>
