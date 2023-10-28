@@ -7,7 +7,14 @@
 <div class="location">
 	<h2 class="name">{location.name}</h2>
 	<p class="place">{location.place}</p>
-	<p class="hours"><i class="icon fa-solid fa-check" /> In store - <b>6:00AM - 10:00PM</b></p>
+	<div class="order-types">
+		{#each location.order_types as t}
+			<p class="hours">
+				<i class="icon fa-solid fa-check" />
+				{t.name} - <b>{t.open} - {t.close}</b>
+			</p>
+		{/each}
+	</div>
 </div>
 
 <style>

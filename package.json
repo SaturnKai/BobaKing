@@ -2,6 +2,16 @@
 	"name": "boba-king",
 	"version": "0.0.1",
 	"private": true,
+	"authors": [
+		{
+			"name": "Brandon",
+			"url": "https://saturnkai.dev/"
+		},
+		{
+			"name": "Ohlin",
+			"url": "https://www.ohlinis.me/"
+		}
+	],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",

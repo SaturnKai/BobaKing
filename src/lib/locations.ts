@@ -21,8 +21,8 @@ const locations: Location[] = [
 		order_types: [
 			{
 				name: 'In store',
-				open: '6:00AM',
-				close: '10:00PM'
+				open: '11:00AM',
+				close: '9:00PM'
 			}
 		]
 	},
@@ -49,6 +49,11 @@ const locations: Location[] = [
 				name: 'In store',
 				open: '6:00AM',
 				close: '10:00PM'
+			},
+			{
+				name: 'Delivery',
+				open: '12:00PM',
+				close: '9:00PM'
 			}
 		]
 	},
@@ -60,8 +65,13 @@ const locations: Location[] = [
 		order_types: [
 			{
 				name: 'In store',
-				open: '6:00AM',
-				close: '10:00PM'
+				open: '7:00AM',
+				close: '8:00PM'
+			},
+			{
+				name: 'Delivery',
+				open: '12:00PM',
+				close: '9:00PM'
 			}
 		]
 	}
