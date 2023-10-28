@@ -1,11 +1,40 @@
 <script lang="ts">
 	import Location from 'components/Location.svelte';
 	import locations from '$lib/locations';
+	import { onMount } from 'svelte';
+	import 'leaflet/dist/leaflet.css';
+
+	let mapElement: HTMLDivElement;
+
+	onMount(async () => {
+		const L = await import('leaflet');
+
+		const map = L.map(mapElement).setView([36.17287278031125, -115.13974219592697], 12);
+		L.tileLayer(`https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`, {
+			attribution:
+				'&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+			maxZoom: 18,
+			tileSize: 512,
+			zoomOffset: -1,
+			worldCopyJump: true,
+			retina: '@2x',
+			detectRetina: true
+		}).addTo(map);
+
+		locations.forEach((l) => {
+			L.marker([l.latitude, l.longitude]).addTo(map).bindPopup(l.name);
+		});
+	});
 </script>
 
 <div class="main-content">
 	<h1 class="title">Locations</h1>
 	<p class="description">Explore our various locations near you.</p>
+
+	<div class="map-container">
+		<div class="map" bind:this={mapElement} />
+	</div>
+
 	<div class="locations">
 		{#each locations as location}
 			<Location {location} />
@@ -15,12 +44,9 @@
 
 <style>
 	.main-content {
-		/* display: flex; */
-		/* flex-direction: column; */
-		/* align-items: center; */
-		/* margin-inline: 20px; */
 		margin: 0 auto;
-		max-width: 1000px;
+		max-width: 1100px;
+		margin-bottom: 80px;
 	}
 
 	.title {
@@ -35,10 +61,28 @@
 		margin-top: 20px;
 	}
 
+	.map-container {
+		width: 100%;
+		height: 500px;
+		margin: 0 auto;
+		position: relative;
+		margin-top: 50px;
+		border-radius: 20px;
+	}
+
+	.map {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: 40px;
+	}
+
 	.locations {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1rem;
+		gap: 2rem;
 		justify-content: center;
 		margin-top: 80px;
 	}

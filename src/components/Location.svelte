@@ -7,7 +7,7 @@
 <div class="location">
 	<h2 class="name">{location.name}</h2>
 	<p class="place">{location.place}</p>
-	<p class="hours">In store - 6:00AM - 10:00PM</p>
+	<p class="hours">In store - <b>6:00AM - 10:00PM</b></p>
 </div>
 
 <style>
@@ -16,14 +16,13 @@
 		border: 2px solid rgba(62, 62, 62, 0.5);
 		padding: 15px 20px;
 		border-radius: 20px;
-
-		width: 400px;
+		width: 500px;
 	}
 
 	.place {
 		font-weight: 500;
 		margin-top: 10px;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 
 	.name {
