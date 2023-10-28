@@ -1,11 +1,17 @@
 <script lang="ts">
 	import Separator from 'components/Separator.svelte';
+	import Input from 'components/Input.svelte';
 </script>
 
 <div class="main-content">
 	<h1 class="title">Contact</h1>
 	<Separator />
 	<p class="description">We would love to hear from you! 💘</p>
+	<div class="group">
+		<Input icon="crown" placeholder="Name" />
+		<Input icon="envelope" placeholder="Email Address" type="email" />
+	</div>
+	<Input icon="pencil" placeholder="Something thoughtful" type="textarea" />
 </div>
 
 <style>
@@ -27,6 +33,14 @@
 		font-weight: 600;
 		text-align: center;
 		color: #c3c3c3;
-		margin-top: 40px;
+		margin: 40px 0 40px 0;
+	}
+
+	.group {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 1rem;
+		grid-row-gap: 0px;
 	}
 </style>

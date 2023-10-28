@@ -8,7 +8,7 @@
         switch(page) {
             case "/menu": icon = "whiskey-glass"; break;
             case "/locations": icon = "location-dot"; break;
-            case "/contact": icon = "envelope"; break;
+            case "/contact": icon = "comments"; break;
             default: icon = "crown"; break;
         }
     }
@@ -56,7 +56,7 @@
         color: #28252d;
         font-size: 3rem;
         justify-content: center;
-        margin: 1rem 0 1rem 0;
+        margin: 0rem 0 2rem 0;
     }
 
     .facts {
