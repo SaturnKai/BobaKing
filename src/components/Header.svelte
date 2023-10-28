@@ -3,7 +3,9 @@
 </script>
 
 <header class="header">
-	<img class="logo" src="/logo.svg" alt="logo" />
+	<a href="/">
+		<img class="logo" src="/logo.svg" alt="logo" draggable="false" />
+	</a>
 	<nav class="nav">
 		<a class="tab" class:selected={page === '/'} href="/">HOME</a>
 		<a class="tab" class:selected={page === '/menu'} href="/menu">MENU</a>

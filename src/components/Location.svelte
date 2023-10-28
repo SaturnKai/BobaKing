@@ -7,7 +7,7 @@
 <div class="location">
 	<h2 class="name">{location.name}</h2>
 	<p class="place">{location.place}</p>
-	<p class="hours">In store - <b>6:00AM - 10:00PM</b></p>
+	<p class="hours"><i class="icon fa-solid fa-check" /> In store - <b>6:00AM - 10:00PM</b></p>
 </div>
 
 <style>
@@ -32,5 +32,10 @@
 
 	.hours {
 		margin-bottom: 10px;
+	}
+
+	.icon {
+		color: #24b655;
+		margin-right: 10px;
 	}
 </style>

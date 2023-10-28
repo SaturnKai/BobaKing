@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Location from 'components/Location.svelte';
+	import Separator from 'components/Separator.svelte';
 	import locations from '$lib/locations';
+
 	import { onMount } from 'svelte';
 	import 'leaflet/dist/leaflet.css';
 
@@ -29,6 +31,7 @@
 
 <div class="main-content">
 	<h1 class="title">Locations</h1>
+	<Separator />
 	<p class="description">Explore our various locations near you.</p>
 
 	<div class="map-container">
@@ -50,15 +53,18 @@
 	}
 
 	.title {
+		font-size: 2rem;
 		margin-top: 40px;
+		margin-bottom: 40px;
 		text-align: center;
 	}
 
 	.description {
-		font-weight: 500;
+		font-size: 1.2rem;
+		font-weight: 600;
 		text-align: center;
 		color: #c3c3c3;
-		margin-top: 20px;
+		margin-top: 40px;
 	}
 
 	.map-container {
