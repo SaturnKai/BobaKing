@@ -2,20 +2,38 @@
 	import Separator from 'components/Separator.svelte';
 	import Input from 'components/Input.svelte';
 	import Button from 'components/Button.svelte';
+
+	let submitted = false;
 </script>
 
 <div class="main-content">
 	<h1 class="title">Contact</h1>
 	<Separator />
-	<p class="description">We would <span class="text-pink">love</span> to hear from you! 💜</p>
-	<div class="group">
-		<Input icon="crown" placeholder="Name" />
-		<Input icon="envelope" placeholder="Email Address" type="email" />
-	</div>
-	<Input icon="pencil" placeholder="Something thoughtful" type="textarea" />
-	<div class="button-container">
-		<Button color="#8951FF" shadow="#623AFF55" hover="#703fd9" icon="paper-plane">Send</Button>
-	</div>
+
+	{#if submitted}
+		<p class="description">
+			Thank you for your message! While you wait for our response, enjoy this cat dancing.
+		</p>
+		<div class="image-container">
+			<img class="image" src="cat-dancing.gif" alt="cat dancing." />
+		</div>
+	{:else}
+		<p class="description">We would <span class="text-pink">love</span> to hear from you! 💜</p>
+		<div class="group">
+			<Input icon="crown" placeholder="Name" />
+			<Input icon="envelope" placeholder="Email Address" type="email" />
+		</div>
+		<Input icon="pencil" placeholder="Something thoughtful" type="textarea" />
+		<div class="button-container">
+			<Button
+				on:click={() => (submitted = true)}
+				color="#8951FF"
+				shadow="#623AFF55"
+				hover="#703fd9"
+				icon="paper-plane">Send</Button
+			>
+		</div>
+	{/if}
 </div>
 
 <svelte:head>
@@ -61,5 +79,16 @@
 
 	.text-pink {
 		color: #ff5a96;
+	}
+
+	.image-container {
+		display: flex;
+	}
+
+	.image {
+		border-radius: 20px;
+		width: 350px;
+		margin: 0 auto;
+		margin-top: 60px;
 	}
 </style>
