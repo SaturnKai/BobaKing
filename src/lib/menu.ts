@@ -1,0 +1,6 @@
+
+const menu = {
+    "Milk Tea": {
+        
+    }
+}
