@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Separator from 'components/Separator.svelte';
+	import menu from '$lib/menu';
 </script>
 
 <svelte:head>
@@ -16,10 +17,22 @@
 		<img src="/assets/img/milktea.webp" alt="Thai Milk Tea">
 		<div class="menu-listing">
 			<div class="menu-head">
-				<h1>Milk Teas</h1>
+				<h1>{menu[0].name}</h1>
 			</div>
 			<div class="menu-items">
-				
+				{#each menu[0].flavors as item}
+					<p>{item}</p>
+				{/each}
+			</div>
+		</div>
+		<div class="menu-listing">
+			<div class="menu-head">
+				<h1>{menu[1].name}</h1>
+			</div>
+			<div class="menu-items">
+				{#each menu[1].flavors as item}
+					<p>{item}</p>
+				{/each}
 			</div>
 		</div>
 	</div>
@@ -49,5 +62,34 @@
 
 	.text-green {
 		color: #2dc86f;
+	}
+
+	.menu-section {
+		display: flex;
+		flex-direction: row;
+		justify-content:flex-start;
+		padding:2rem;
+		height: 20rem;
+	}
+
+	.menu-head h1 {
+		font-weight: 600;
+		color: #FFB186;
+	}
+
+	.menu-listing {
+		width: 100%;
+		padding-left:2rem;
+	}
+
+	.menu-items {
+		display:flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+		height: 100%;
+		color: #fff;
+		font-weight: 600;
+		padding: 0.5rem
 	}
 </style>
