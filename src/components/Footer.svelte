@@ -69,6 +69,15 @@
 		margin: 0rem 0 2rem 0;
 	}
 
+	.icon-splash .fa-solid {
+		transition: 0.25s ease;
+	}
+
+	.icon-splash .fa-solid:hover {
+		transform:translateY(-0.25rem);
+		color: #393042;
+	}
+
 	.facts {
 		all: unset;
 		cursor: pointer;
@@ -88,8 +97,10 @@
 	}
 
 	.icon {
+		color: #c3c3c3;
 		font-size: 2rem;
 		padding-right: 20px;
+		transition: 0.25s ease;
 	}
 
 	.link {

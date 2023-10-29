@@ -15,7 +15,7 @@
 			Thank you for your message! While you wait for our response, enjoy this cat dancing.
 		</p>
 		<div class="image-container">
-			<img class="image" src="cat-dancing.gif" alt="cat dancing." />
+			<img class="image" src="/assets/img/cat-dancing.gif" alt="cat dancing." />
 		</div>
 	{:else}
 		<p class="description">We would <span class="text-pink">love</span> to hear from you! 💜</p>

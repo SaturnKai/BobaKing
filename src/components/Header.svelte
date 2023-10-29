@@ -4,7 +4,7 @@
 
 <header class="header">
 	<a href="/">
-		<img class="logo" src="/logo.svg" alt="logo" draggable="false" />
+		<img class="logo" src="/assets/ui/logo.svg" alt="logo" draggable="false" />
 	</a>
 	<nav class="nav">
 		<a class="tab" class:selected={page === '/'} href="/">HOME</a>

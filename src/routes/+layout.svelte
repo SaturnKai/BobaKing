@@ -14,8 +14,8 @@
 		crossorigin="anonymous"
 		referrerpolicy="no-referrer"
 	/>
-	<link rel="icon" href="/icon-32x32.png" sizes="32x32" />
-	<link rel="icon" href="/icon-192x192.png" sizes="192x192" />
+	<link rel="icon" href="/assets/favicon/icon-32x32.png" sizes="32x32" />
+	<link rel="icon" href="/assets/favicon/icon-192x192.png" sizes="192x192" />
 </svelte:head>
 
 <Header page={$page.url.pathname} />
