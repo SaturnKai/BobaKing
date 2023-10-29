@@ -7,7 +7,7 @@
 <div class="main-content">
 	<h1 class="title">Contact</h1>
 	<Separator />
-	<p class="description">We would love to hear from you! 💘</p>
+	<p class="description">We would <span class="text-pink">love</span> to hear from you! 💜</p>
 	<div class="group">
 		<Input icon="crown" placeholder="Name" />
 		<Input icon="envelope" placeholder="Email Address" type="email" />
@@ -17,6 +17,10 @@
 		<Button color="#8951FF" shadow="#623AFF55" hover="#703fd9" icon="paper-plane">Send</Button>
 	</div>
 </div>
+
+<svelte:head>
+	<title>Boba King | Contact</title>
+</svelte:head>
 
 <style>
 	.main-content {
@@ -53,6 +57,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: end;
+	}
 
+	.text-pink {
+		color: #ff5a96;
 	}
 </style>

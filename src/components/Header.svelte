@@ -8,9 +8,9 @@
 	</a>
 	<nav class="nav">
 		<a class="tab" class:selected={page === '/'} href="/">HOME</a>
-		<a class="tab" class:selected={page === '/menu'} href="/menu">MENU</a>
-		<a class="tab" class:selected={page === '/locations'} href="/locations">LOCATIONS</a>
-		<a class="tab" class:selected={page === '/contact'} href="/contact">CONTACT</a>
+		<a class="tab" class:selected={page.startsWith('/menu')} href="/menu">MENU</a>
+		<a class="tab" class:selected={page.startsWith('/locations')} href="/locations">LOCATIONS</a>
+		<a class="tab" class:selected={page.startsWith('/contact')} href="/contact">CONTACT</a>
 	</nav>
 </header>
 

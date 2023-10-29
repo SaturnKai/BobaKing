@@ -17,10 +17,7 @@
 				'&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
 			maxZoom: 18,
 			tileSize: 512,
-			zoomOffset: -1,
-			worldCopyJump: true,
-			retina: '@2x',
-			detectRetina: true
+			zoomOffset: -1
 		}).addTo(map);
 
 		locations.forEach((l) => {
@@ -28,6 +25,10 @@
 		});
 	});
 </script>
+
+<svelte:head>
+	<title>Boba King | Locations</title>
+</svelte:head>
 
 <div class="main-content">
 	<h1 class="title">Locations</h1>

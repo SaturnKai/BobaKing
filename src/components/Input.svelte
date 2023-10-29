@@ -1,67 +1,92 @@
 <script lang="ts">
-    export let icon = "";
-    export let type = "text";
-    export let placeholder = "This is your alert to add a placeholder";
+	export let icon = '';
+	export let type = 'text';
+	export let placeholder = 'This is your alert to add a placeholder';
 </script>
 
-{#if type === "textarea"}
-    <div class="wrapper">
-        <textarea class="text-area" rows="5" placeholder={placeholder}></textarea>
-        <i class="fa-solid fa-{icon}"></i>
-    </div>
+{#if type === 'textarea'}
+	<div class="wrapper">
+		<textarea class="text-area" rows="8" {placeholder} />
+		<i class="fa-solid fa-{icon}" />
+	</div>
 {:else}
-<div class="input-wrapper">
-    {#if icon}
-        <i class="fa-solid fa-{icon}"></i>
-    {/if}
-    <input type={type} placeholder={placeholder}>
-</div>
+	<div class="input-wrapper">
+		{#if icon}
+			<i class="fa-solid fa-{icon}" />
+		{/if}
+		<input class="input" {type} {placeholder} />
+	</div>
 {/if}
 
 <style>
-    .input-wrapper, .text-area {
-        all: unset;
-        background-color: #1d191f;
+	.input-wrapper,
+	.text-area {
+		all: unset;
+		background-color: #1d191f;
 		border: 2px solid rgba(62, 62, 62, 0.5);
 		padding: 1rem 1.25rem;
 		border-radius: 0.75rem;
-    }
 
-    .text-area {
-        margin-top: 1rem;
-        width: calc(100% - 44px);
-        font-weight: 500;
-        line-height: 2rem;
-    }
-    
-    .wrapper .fa-solid {
-        position: relative;
-        float: right;
-        top:-2.25rem;
-        left: -1rem;
-    }
+		transition: border-color 150ms ease;
+	}
 
-    .input-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 0.75rem;
-    }
+	.input-wrapper:focus-within {
+		border-color: rgba(62, 62, 62, 1);
+	}
 
-    .input-wrapper input {
-        all: unset;
-        margin-left: 1rem;
-        width: 100%;
-        color: #ffffff;
-        font-weight: 500;
-        line-height: 0.75rem;
-    }
+	.wrapper:focus-within .fa-solid {
+		color: #fcbb15;
+	}
 
-    .input-wrapper input::placeholder, .text-area::placeholder {
-        color: #505050;
-    }
+	.input-wrapper:focus-within .fa-solid {
+		color: #fcbb15;
+	}
 
-    .fa-solid {
-        color: #707070;
-    }
+	.text-area {
+		margin-top: 1rem;
+		width: calc(100% - 44px);
+		font-weight: 500;
+		line-height: 2rem;
+	}
+
+	.text-area:focus {
+		border-color: rgba(62, 62, 62, 1);
+	}
+
+	.wrapper .fa-solid {
+		position: relative;
+		float: right;
+		top: -2.25rem;
+		left: -1rem;
+	}
+
+	.input-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 0.75rem;
+	}
+
+	.input-wrapper input {
+		all: unset;
+		margin-left: 1rem;
+		width: 100%;
+		color: #ffffff;
+		font-weight: 500;
+		line-height: 0.75rem;
+	}
+
+	.input-wrapper input::placeholder,
+	.text-area::placeholder {
+		color: #505050;
+	}
+
+	.fa-solid {
+		color: #707070;
+		transition: color 150ms ease;
+	}
+
+	.input {
+		border: 2px solid rgba(62, 62, 62, 1);
+	}
 </style>
