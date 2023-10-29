@@ -4,6 +4,12 @@
 	import Button from 'components/Button.svelte';
 
 	let submitted = false;
+
+	let name: string, email: string, content: string;
+
+	function submit() {
+		if (name.length && email.length && content.length) submitted = true;
+	}
 </script>
 
 <div class="main-content">
@@ -20,13 +26,13 @@
 	{:else}
 		<p class="description">We would <span class="text-pink">love</span> to hear from you! 💜</p>
 		<div class="group">
-			<Input icon="crown" placeholder="Name" />
-			<Input icon="envelope" placeholder="Email Address" type="email" />
+			<Input bind:value={name} icon="crown" placeholder="Name" />
+			<Input bind:value={email} icon="envelope" placeholder="Email Address" type="email" />
 		</div>
-		<Input icon="pencil" placeholder="Something thoughtful" type="textarea" />
+		<Input bind:value={content} icon="pencil" placeholder="Something thoughtful" type="textarea" />
 		<div class="button-container">
 			<Button
-				on:click={() => (submitted = true)}
+				on:click={submit}
 				color="#8951FF"
 				shadow="#623AFF55"
 				hover="#703fd9"

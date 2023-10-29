@@ -2,11 +2,17 @@
 	export let icon = '';
 	export let type = 'text';
 	export let placeholder = 'This is your alert to add a placeholder';
+
+	export let value: string;
+
+	const onInput = (e: Event) => {
+		value = e.target!.value;
+	};
 </script>
 
 {#if type === 'textarea'}
 	<div class="wrapper">
-		<textarea class="text-area" rows="8" {placeholder} />
+		<textarea bind:value class="text-area" rows="8" {placeholder} on:input={onInput} />
 		<i class="fa-solid fa-{icon}" />
 	</div>
 {:else}
@@ -14,7 +20,7 @@
 		{#if icon}
 			<i class="fa-solid fa-{icon}" />
 		{/if}
-		<input class="input" {type} {placeholder} />
+		<input bind:value class="input" {placeholder} on:input={onInput} />
 	</div>
 {/if}
 

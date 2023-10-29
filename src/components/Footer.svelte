@@ -22,7 +22,7 @@
 	}
 
 	function randomFact() {
-		fact = facts[Math.floor(Math.random() * facts.length)];
+		fact = facts.filter((f) => f != fact)[Math.floor(Math.random() * (facts.length - 1))];
 	}
 </script>
 
@@ -74,7 +74,7 @@
 	}
 
 	.icon-splash .fa-solid:hover {
-		transform:translateY(-0.25rem);
+		transform: translateY(-0.25rem);
 		color: #393042;
 	}
 

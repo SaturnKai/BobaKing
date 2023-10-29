@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Separator from 'components/Separator.svelte';
+	import PriceTable from 'components/PriceTable.svelte';
 </script>
 
 <svelte:head>
@@ -12,17 +13,7 @@
 	<p class="description">
 		Your choice of teas, slushes, and toppings, for <span class="text-green">2,000+</span> combinations.
 	</p>
-	<div class="menu-section">
-		<img src="/assets/img/milktea.webp" alt="Thai Milk Tea">
-		<div class="menu-listing">
-			<div class="menu-head">
-				<h1>Milk Teas</h1>
-			</div>
-			<div class="menu-items">
-				
-			</div>
-		</div>
-	</div>
+	<PriceTable />
 </div>
 
 <style>
