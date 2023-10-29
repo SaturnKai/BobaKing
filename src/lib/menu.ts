@@ -15,6 +15,41 @@ const menu: ItemType[] = [
             'Chocolate', 'Matcha Green Tea', 'Honeyew', 'Taro', 'Peach', 'Lychee', 'Wintermelon',
 			'Hokkaido', 'Nagasaki', 'Horchata', 'Rose', 'Coconut', 'Mix and Match'
 		]
+	},
+	{
+		name: 'Slush',
+		flavors: [
+            "Mango",
+            "Passion Fruit",
+            "Pomegranate",
+            "Tropical",
+            "Pineapple",
+            "Strawberry",
+            "Green Apple",
+            "Almond",
+            "Cookies & Cream",
+            "Watermelon",
+            "Coffee",
+            "Coconut",
+            "Chocolate",
+            "Red Guava",
+            "Matcha Green Tea",
+            "Strawberry Banana",
+            "Honeydew",
+            "Pineapple Coconut",
+            "Thai Tea",
+            "Taro",
+            "Horchata",
+            "Grapefruit",
+            "Peach",
+            "Cantaloupe",
+            "Lychee",
+            "Kiwi",
+            "Orange",
+            "Grape",
+            "Pistachio",
+            "Mix & Match"
+        ]
 	}
 ];
 
