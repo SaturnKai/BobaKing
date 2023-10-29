@@ -96,5 +96,10 @@
 		width: 350px;
 		margin: 0 auto;
 		margin-top: 60px;
+		transition: filter 100ms ease;
+	}
+
+	.image:hover {
+		filter: brightness(80%);
 	}
 </style>

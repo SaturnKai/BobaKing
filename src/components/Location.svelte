@@ -2,10 +2,12 @@
 	import type { Location } from '$lib/locations';
 
 	export let location: Location;
+	export let selected = false;
+	export let index = 0;
 </script>
 
-<div class="location">
-	<h2 class="name">{location.name}</h2>
+<div class="location" class:selected style="--timing: {index}ms;">
+	<h2 class="name" class:selected>{location.name}</h2>
 	<p class="place">{location.place}</p>
 	<div class="order-types">
 		{#each location.order_types as t}
@@ -24,6 +26,27 @@
 		padding: 15px 20px;
 		border-radius: 20px;
 		width: 500px;
+
+		opacity: 0;
+
+		animation: location-FadeIn 0.2s ease forwards;
+		animation-delay: var(--timing);
+	}
+
+	@keyframes location-FadeIn {
+		from {
+			transform: translateY(-10px);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+	}
+
+	.location.selected {
+		border: 2px solid rgba(141, 171, 255, 0.5);
 	}
 
 	.place {
@@ -34,7 +57,11 @@
 
 	.name {
 		color: #ffae50;
+	}
+
+	.name.selected {
 		text-decoration: underline;
+		color: #8dabff;
 	}
 
 	.hours {

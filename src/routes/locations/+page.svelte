@@ -7,6 +7,12 @@
 	import 'leaflet/dist/leaflet.css';
 
 	let mapElement: HTMLDivElement;
+	let selectedLocation: string;
+	let timing = 80;
+
+	function marker_click(name: string) {
+		selectedLocation = name;
+	}
 
 	onMount(async () => {
 		const L = await import('leaflet');
@@ -21,7 +27,10 @@
 		}).addTo(map);
 
 		locations.forEach((l) => {
-			L.marker([l.latitude, l.longitude]).addTo(map).bindPopup(l.name);
+			L.marker([l.latitude, l.longitude])
+				.addTo(map)
+				.bindPopup(l.name)
+				.on('click', () => marker_click(l.name));
 		});
 	});
 </script>
@@ -40,8 +49,8 @@
 	</div>
 
 	<div class="locations">
-		{#each locations as location}
-			<Location {location} />
+		{#each locations as location, i}
+			<Location index={i * timing} selected={selectedLocation === location.name} {location} />
 		{/each}
 	</div>
 </div>
@@ -74,7 +83,7 @@
 		margin: 0 auto;
 		position: relative;
 		margin-top: 50px;
-		border-radius: 20px;
+		border-radius: 5px;
 	}
 
 	.map {
@@ -83,7 +92,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		border-radius: 40px;
+		border-radius: 20px;
 	}
 
 	.locations {
