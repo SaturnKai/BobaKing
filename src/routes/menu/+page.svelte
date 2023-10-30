@@ -43,13 +43,14 @@
 		</div>
 	</div>
 
-	<div class="menu-section">
+	<div class="menu-section section-2">
 		<img src="/assets/img/slush.webp" alt="Thai Milk Tea" />
 		<div class="menu-listing">
 			<div class="menu-head">
-				<h1>{menu[2].name}</h1>
-				<h1 style="padding: 0 1rem 0 1rem;color:#393042;">/</h1>
-				<h1 class="separated">Milk Blend</h1>
+				<h1>{menu[2].name} <span class="text-orange">or</span> Milk Blend</h1>
+				<!-- <h1>{menu[2].name}</h1> -->
+				<!-- <h1 style="padding: 0 1rem 0 1rem;color:#393042;">/</h1> -->
+				<!-- <h1 class="separated">Milk Blend</h1> -->
 			</div>
 			<div class="menu-items">
 				{#each menu[2].flavors as item}
@@ -58,6 +59,8 @@
 			</div>
 		</div>
 	</div>
+
+	<Separator />
 </div>
 
 <style>
@@ -115,7 +118,7 @@
 	.menu-listing {
 		width: 100%;
 		padding-left: 2rem;
-		border-left: 0.25rem solid transparent;
+		/* border-left: 0.25rem solid transparent; */
 	}
 
 	.menu-items {
@@ -131,5 +134,13 @@
 
 	.menu-items > p {
 		line-height: 1.5;
+	}
+
+	.text-orange {
+		color: #ea98ff;
+	}
+
+	.section-2 {
+		margin-bottom: 80px;
 	}
 </style>
