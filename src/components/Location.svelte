@@ -4,9 +4,18 @@
 	export let location: Location;
 	export let selected = false;
 	export let index = 0;
+	let timing = 80;
 </script>
 
-<div class="location" class:selected style="--timing: {index}ms;" on:click>
+<div
+	class="location"
+	class:selected
+	style="--timing: {index * timing}ms;"
+	on:click
+	role="button"
+	tabindex={index}
+	on:keypress
+>
 	<h2 class="name" class:selected>{location.name}</h2>
 	<p class="place">{location.place}</p>
 	<div class="order-types">
@@ -26,9 +35,7 @@
 		padding: 15px 20px;
 		border-radius: 20px;
 		width: 500px;
-
 		opacity: 0;
-
 		animation: location-FadeIn 0.2s ease forwards;
 		animation-delay: var(--timing);
 		cursor: pointer;

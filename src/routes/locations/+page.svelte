@@ -10,7 +10,6 @@
 
 	let mapElement: HTMLDivElement;
 	let selectedLocation: string;
-	let timing = 80;
 
 	const markers: { [key: string]: Marker } = {};
 
@@ -60,10 +59,11 @@
 	<div class="locations">
 		{#each locations as location, i}
 			<Location
-				index={i * timing}
+				index={i}
 				selected={selectedLocation === location.name}
 				{location}
 				on:click={() => location_click(location.name)}
+				on:keypress={() => location_click(location.name)}
 			/>
 		{/each}
 	</div>
