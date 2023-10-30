@@ -14,7 +14,7 @@
 	],
 	"scripts": {
 		"dev": "vite dev",
-		"start": "http-server build",
+		"start": "node build",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -42,7 +42,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"http-server": "^14.1.1",
 		"leaflet": "^1.9.4"
 	}
 }
