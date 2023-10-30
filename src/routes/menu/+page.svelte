@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Separator from 'components/Separator.svelte';
 	import PriceTable from 'components/PriceTable.svelte';
+	import Button from 'components/Button.svelte';
 	import menu from '$lib/menu';
 </script>
 
@@ -63,6 +64,10 @@
 	</div>
 
 	<Separator text="Toppings" />
+
+	<a href="/download/menu.pdf" target="_blank">
+		<Button color="#5177FF" shadow="#5177FF55" hover="#405ec9">View as PDF</Button>
+	</a>
 </div>
 
 <style>
