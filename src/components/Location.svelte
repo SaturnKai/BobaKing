@@ -6,7 +6,7 @@
 	export let index = 0;
 </script>
 
-<div class="location" class:selected style="--timing: {index}ms;">
+<div class="location" class:selected style="--timing: {index}ms;" on:click>
 	<h2 class="name" class:selected>{location.name}</h2>
 	<p class="place">{location.place}</p>
 	<div class="order-types">
@@ -31,6 +31,11 @@
 
 		animation: location-FadeIn 0.2s ease forwards;
 		animation-delay: var(--timing);
+		cursor: pointer;
+	}
+
+	.location:hover {
+		border: 2px solid rgba(100, 100, 100, 0.5);
 	}
 
 	@keyframes location-FadeIn {

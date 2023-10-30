@@ -1,36 +1,45 @@
 <script lang="ts">
 	import Location from 'components/Location.svelte';
 	import Separator from 'components/Separator.svelte';
-	import locations from '$lib/locations';
+	import locations, { type Location as Location_t } from '$lib/locations';
 
 	import { onMount } from 'svelte';
 	import 'leaflet/dist/leaflet.css';
+
+	import type { Marker } from 'leaflet';
 
 	let mapElement: HTMLDivElement;
 	let selectedLocation: string;
 	let timing = 80;
 
+	const markers: { [key: string]: Marker } = {};
+
 	function marker_click(name: string) {
 		selectedLocation = name;
+	}
+
+	function location_click(name: string) {
+		selectedLocation = name;
+		markers[name].openPopup();
 	}
 
 	onMount(async () => {
 		const L = await import('leaflet');
 
-		const map = L.map(mapElement).setView([36.17287278031125, -115.13974219592697], 12);
+		const map = L.map(mapElement).setView([36.17165547765068, -115.14054141877322], 10);
 		L.tileLayer(`https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`, {
 			attribution:
 				'&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
-			maxZoom: 18,
-			tileSize: 512,
-			zoomOffset: -1
+			maxZoom: 18
 		}).addTo(map);
 
-		locations.forEach((l) => {
-			L.marker([l.latitude, l.longitude])
+		locations.forEach((l: Location_t) => {
+			const marker = L.marker([l.latitude, l.longitude])
 				.addTo(map)
-				.bindPopup(l.name)
+				.bindPopup(`<b>${l.name}</b><br><span>${l.place}</span>`)
 				.on('click', () => marker_click(l.name));
+
+			markers[l.name] = marker;
 		});
 	});
 </script>
@@ -50,7 +59,12 @@
 
 	<div class="locations">
 		{#each locations as location, i}
-			<Location index={i * timing} selected={selectedLocation === location.name} {location} />
+			<Location
+				index={i * timing}
+				selected={selectedLocation === location.name}
+				{location}
+				on:click={() => location_click(location.name)}
+			/>
 		{/each}
 	</div>
 </div>
@@ -93,6 +107,7 @@
 		bottom: 0;
 		left: 0;
 		border-radius: 20px;
+		transform: translate3d(0, 0, 0);
 	}
 
 	.locations {

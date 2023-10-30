@@ -14,7 +14,7 @@ export interface Location {
 
 const locations: Location[] = [
 	{
-		name: '3030 W AN RD SUITE 107',
+		name: '3030 W ANN RD SUITE 107',
 		place: 'North Las Vegas, NV 89031',
 		latitude: 36.26239495652529,
 		longitude: -115.18190887337805,
@@ -60,8 +60,8 @@ const locations: Location[] = [
 	{
 		name: '2679 S Eastern Ave',
 		place: 'Las Vegas, NV 89169',
-		latitude: 36.14827807523635,
-		longitude: -115.11603477278665,
+		latitude: 36.14135406710169,
+		longitude: -115.1194747762613,
 		order_types: [
 			{
 				name: 'In store',
