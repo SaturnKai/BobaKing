@@ -7,6 +7,8 @@
 </script>
 
 <svelte:head>
+	<meta name="author" content="Brandon G, Ohlin A" />
+	<meta name="description" content="The best boba in Vegas." />
 	<link
 		rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
