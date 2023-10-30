@@ -19,7 +19,7 @@ const menu: ItemType[] = [
 			'Almond',
 			'Coffee',
 			'Chocolate',
-			'Honeyew',
+			'Honeydew',
 			'Taro',
 			'Peach',
 			'Lychee',
@@ -67,6 +67,29 @@ const menu: ItemType[] = [
 			'Pistachio',
 			'Mix & Match'
 		]
+	},
+	{
+		name: 'Popping Pearls',
+		flavors: [
+			'Strawberry',
+			'Mango',
+			'Kiwi',
+			'Lychee',
+			'Passion Fruit',
+			'Peach',
+			'Green Apple',
+			'Blueberry',
+			'Yogurt',
+			'cantaloupe'
+		]
+	},
+	{
+		name: 'Jelly',
+		flavors: ['Lychee CocoJelly', 'Rainbow Jelly', 'Coffee Jelly']
+	},
+	{
+		name: 'Pudding',
+		flavors: ['Taro Pudding', 'Custard Pudding']
 	}
 ];
 

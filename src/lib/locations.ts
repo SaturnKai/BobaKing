@@ -52,7 +52,7 @@ const locations: Location[] = [
 			},
 			{
 				name: 'Delivery',
-				open: '12:00PM',
+				open: '6:00AM',
 				close: '9:00PM'
 			}
 		]
@@ -70,8 +70,8 @@ const locations: Location[] = [
 			},
 			{
 				name: 'Delivery',
-				open: '12:00PM',
-				close: '9:00PM'
+				open: '7:00AM',
+				close: '7:00PM'
 			}
 		]
 	},
@@ -102,7 +102,7 @@ const locations: Location[] = [
 			},
 			{
 				name: 'Delivery',
-				open: '12:00PM',
+				open: '7:00AM',
 				close: '9:00PM'
 			}
 		]
@@ -120,8 +120,8 @@ const locations: Location[] = [
 			},
 			{
 				name: 'Delivery',
-				open: '12:00PM',
-				close: '9:00PM'
+				open: '7:00AM',
+				close: '8:00PM'
 			}
 		]
 	}

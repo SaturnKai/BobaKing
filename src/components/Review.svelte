@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let name: string;
-	export let content: string;
 	export let date: string;
 
 	export let id: string;
@@ -18,7 +17,9 @@
 		<i class="icon fa-solid fa-star" />
 		<i class="icon fa-solid fa-star" />
 	</div>
-	<p class="content">{content}</p>
+	<p class="content">
+		<slot />
+	</p>
 </div>
 
 <style>
@@ -44,10 +45,12 @@
 	}
 
 	.date {
+		font-weight: 500;
 		color: #474747;
 	}
 
 	.content {
+		font-weight: 500;
 		color: #c3c3c3;
 		line-height: 1.8;
 		margin-top: 20px;

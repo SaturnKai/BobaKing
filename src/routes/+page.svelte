@@ -13,8 +13,8 @@
 		<div class="left">
 			<h1 class="title">Best Boba in <span class="text-yellow">Vegas</span></h1>
 			<p class="description">
-				With over <span class="text-green">6 locations</span>, we server the highest quality boba
-				tea in the valley.
+				With <span class="text-green">7 locations</span>, we server the <b>highest quality</b> boba tea
+				in the valley.
 			</p>
 			<a class="menu-button" href="/menu">
 				<Button color="#ff5151" shadow="#ff3a3a55" hover="#e44747">View Menu</Button>
@@ -27,27 +27,31 @@
 	<Separator />
 	<h2 class="title-2">What Is Boba?</h2>
 	<p class="description text-center">
-		Bubble tea can't be complete without a boba topping. However, much too often when you go to a
-		store, you can become overwhelmed by the varieties of bobas. We have the popular bobas on the
-		market explained, so you don't get panicked when you order a bubble tea drink next time.
+		Bubble tea can't be complete without a boba topping. <b>However</b>, much too often when you go
+		to a store, you can become overwhelmed by the <b>varieties of bobas</b>. We have the popular
+		bobas on the market explained, so you don't get panicked when you order a bubble tea drink next
+		time.
 	</p>
 	<div class="reel-container">
 		<img class="image-2" src="reel.webp" alt="reel of boba drinks." />
 	</div>
 	<h3 class="title-3 text-center">Reviews <span class="text-brown">&</span> Ratings</h3>
 	<div class="reviews">
-		<Review
-			name="Dr. C"
-			content="This place is really great! Fast service, and well done menu. Now let me ask you this, is it worth it?"
-			date="Jan 11"
-			id="r1"
-		/>
-		<Review
-			name="Jeremy A."
-			content="Boba is king. Boba is life. I go to this place every single day. I live here. Anyways, check it out!"
-			date="May 25"
-			id="r2"
-		/>
+		<Review name="Ben C." date="Jan 11" id="r1"
+			>This place is amazing! Fast service, and a great selection of items. <b>
+				Now let me ask you this,
+			</b>
+			is it
+			<a
+				class="link"
+				href="https://i.kym-cdn.com/entries/icons/original/000/041/366/isitreallyworthit.jpg"
+				target="_blank">worth it?</a
+			></Review
+		>
+		<Review name="Jeremy A." date="May 25" id="r2"
+			>Boba is king. Boba is life. 🙏😭 I go to this place every single day. I live here, you should
+			definitely <b>check it out!</b></Review
+		>
 	</div>
 	<div class="end" />
 </div>
@@ -75,6 +79,11 @@
 		margin: 0 auto;
 		border-radius: 20px;
 		margin-top: 40px;
+		transition: filter 100ms ease;
+	}
+
+	.image-2:hover {
+		filter: brightness(80%);
 	}
 
 	.left {
@@ -127,6 +136,16 @@
 		width: 100px;
 		height: 80px;
 		margin-bottom: 200px;
+	}
+
+	.link {
+		font-weight: 600;
+		text-decoration: none;
+		color: #fc9090;
+	}
+
+	.link:hover {
+		color: #dd7878;
 	}
 
 	.text-center {
