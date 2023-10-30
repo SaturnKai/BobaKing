@@ -13,8 +13,8 @@
 		<div class="left">
 			<h1 class="title">Best Boba in <span class="text-yellow">Vegas</span></h1>
 			<p class="description">
-				With <span class="text-green">7 locations</span>, we server the <b>highest quality</b> boba tea
-				in the valley.
+				With <a class="link-2" href="/locations">7 locations</a>, we server the
+				<b>highest quality</b> boba tea in the valley.
 			</p>
 			<a class="menu-button" href="/menu">
 				<Button color="#ff5151" shadow="#ff3a3a55" hover="#e44747">View Menu</Button>
@@ -148,16 +148,21 @@
 		color: #dd7878;
 	}
 
+	.link-2 {
+		color: #2dc86f;
+		text-decoration: none;
+	}
+
+	.link-2:hover {
+		color: #23a059;
+	}
+
 	.text-center {
 		text-align: center;
 	}
 
 	.text-yellow {
 		color: #fcbb15;
-	}
-
-	.text-green {
-		color: #2dc86f;
 	}
 
 	.text-brown {

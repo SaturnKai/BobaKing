@@ -23,7 +23,7 @@
 	<Separator text="Drinks" />
 
 	<div class="menu-section">
-		<img src="/assets/img/milktea.webp" alt="Thai Milk Tea" />
+		<img src="/assets/img/milktea.webp" alt="Thai Milk Tea" draggable="false" />
 		<div class="menu-listing">
 			<div class="menu-head">
 				<h1>{menu[0].name}</h1>
@@ -47,10 +47,10 @@
 	</div>
 
 	<div class="menu-section section-2">
-		<img src="/assets/img/slush.webp" alt="Thai Milk Tea" />
+		<img src="/assets/img/slush.webp" alt="Thai Milk Tea" draggable="false" />
 		<div class="menu-listing">
 			<div class="menu-head">
-				<h1>{menu[2].name} <span class="text-orange">or</span> Milk Blend</h1>
+				<h1>{menu[2].name} <span class="text-grey">/</span> Milk Blend</h1>
 			</div>
 			<div class="menu-items">
 				{#each menu[2].flavors as item}
@@ -67,7 +67,7 @@
 			<div class="menu-head">
 				<h1>Tapioca Pearls <span class="price">$0.50</span></h1>
 			</div>
-			<img class="menu-image" src="/assets/img/boba.webp" alt="Tapioca pearls" />
+			<img class="menu-image" src="/assets/img/boba.webp" alt="Tapioca pearls" draggable="false" />
 		</div>
 		<div class="menu-listing" style="width:50%;">
 			<div class="menu-head">
@@ -174,7 +174,7 @@
 
 	.menu-head {
 		display: flex;
-		padding-bottom: 0.5rem;
+		padding-bottom: 1rem;
 	}
 
 	.menu-listing {
@@ -204,8 +204,8 @@
 		margin-top: 1rem;
 	}
 
-	.text-orange {
-		color: #ea98ff;
+	.text-grey {
+		color: #333333;
 	}
 
 	.section-2 {
