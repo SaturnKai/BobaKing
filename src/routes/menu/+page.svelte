@@ -62,16 +62,16 @@
 
 	<Separator text="Toppings" />
 
-	<div class="centered-container toppings">
+	<div class="centered-container toppings" style="height: 13rem; margin-top: 4rem;">
 		<div class="menu-listing">
 			<div class="menu-head">
-				<h1>Tapioca Pearls</h1>
+				<h1>Tapioca Pearls <span class="price">$0.50</span></h1>
 			</div>
-			<img src="/assets/img/boba.webp" alt="Tapioca pearls" />
+			<img class="menu-image" src="/assets/img/boba.webp" alt="Tapioca pearls" />
 		</div>
-		<div class="menu-listing">
+		<div class="menu-listing" style="width:50%;">
 			<div class="menu-head">
-				<h1>Tapioca Pearls</h1>
+				<h1>{menu[3].name} <span class="price">$0.75</span></h1>
 			</div>
 			<div class="menu-items">
 				{#each menu[3].flavors as item}
@@ -81,7 +81,7 @@
 		</div>
 		<div class="menu-listing">
 			<div class="menu-head">
-				<h1>Tapioca Pearls</h1>
+				<h1>{menu[4].name} <span class="price">$0.75</span></h1>
 			</div>
 			<div class="menu-items">
 				{#each menu[4].flavors as item}
@@ -91,7 +91,7 @@
 		</div>
 		<div class="menu-listing">
 			<div class="menu-head">
-				<h1>Tapioca Pearls</h1>
+				<h1>{menu[5].name} <span class="price">$0.50</span></h1>
 			</div>
 			<div class="menu-items">
 				{#each menu[5].flavors as item}
@@ -101,7 +101,7 @@
 		</div>
 	</div>
 
-	<div class="centered-container">
+	<div class="centered-container" style="padding-top:4rem;">
 		<a href="/download/menu.pdf" target="_blank">
 			<Button color="#5177FF" shadow="#5177FF55" hover="#405ec9">View as PDF</Button>
 		</a>
@@ -155,6 +155,7 @@
 
 	.toppings > .menu-listing > .menu-head h1 {
 		font-size: 1.125rem;
+		color: #ea98ff;
 	}
 
 	.toppings > .menu-listing > .menu-head {
@@ -198,11 +199,25 @@
 		line-height: 1.5;
 	}
 
+	.menu-image {
+		height: 8rem;
+		margin-top: 1rem;
+	}
+
 	.text-orange {
 		color: #ea98ff;
 	}
 
 	.section-2 {
 		margin-bottom: 80px;
+	}
+
+	.price {
+		font-family: 'Source Code Pro', monospace;
+		font-weight: 500;
+		font-size: 0.8rem;
+		color: #757575;
+		text-align: center;
+		margin-left: 0.5rem;
 	}
 </style>

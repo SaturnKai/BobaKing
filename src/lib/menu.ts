@@ -80,7 +80,7 @@ const menu: ItemType[] = [
 			'Green Apple',
 			'Blueberry',
 			'Yogurt',
-			'cantaloupe'
+			'Cantaloupe'
 		]
 	},
 	{
