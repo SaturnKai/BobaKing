@@ -31,26 +31,39 @@
 </div>
 
 <footer class="footer">
-	<button class="facts" on:click={() => randomFact()}>
-		<h1>Did you know?</h1>
-		<p class="fact">{fact}</p>
-	</button>
-	<a
-		class="link"
-		href="https://www.instagram.com/bobakingvegas/"
-		target="_blank"
-		rel="noopener noreferrer"
-	>
-		<i class="icon fa-brands fa-instagram" />
-	</a>
+	<div class="container"></div>
+	<div class="container" style="width: 100%">
+		<button class="facts" on:click={() => randomFact()}>
+			<h1>Did you know?</h1>
+			<p class="fact">{fact}</p>
+		</button>
+	</div>
+	<div class="container" style="justify-content:flex-end">
+		<a
+			class="link"
+			href="https://www.instagram.com/bobakingvegas/"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="icon fa-brands fa-instagram" />
+		</a>
+	</div>
 </footer>
 
 <style>
 	.footer {
-		display: flex;
-		align-items: center;
 		background-color: #28252d;
 		border-top: 2px solid rgba(122, 122, 122, 0.5);
+	}
+
+	.footer > .container {
+		display:flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.footer > * {
+		width: 50%;
 	}
 
 	.icon-splash,
