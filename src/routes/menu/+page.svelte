@@ -16,7 +16,7 @@
 		Your choice of teas, slushes, and toppings, for <span class="text-green">2,000+</span> combinations.
 	</p>
 
-	<div class="price-section">
+	<div class="price-section centered-container">
 		<PriceTable />
 	</div>
 
@@ -51,9 +51,6 @@
 		<div class="menu-listing">
 			<div class="menu-head">
 				<h1>{menu[2].name} <span class="text-orange">or</span> Milk Blend</h1>
-				<!-- <h1>{menu[2].name}</h1> -->
-				<!-- <h1 style="padding: 0 1rem 0 1rem;color:#393042;">/</h1> -->
-				<!-- <h1 class="separated">Milk Blend</h1> -->
 			</div>
 			<div class="menu-items">
 				{#each menu[2].flavors as item}
@@ -65,9 +62,50 @@
 
 	<Separator text="Toppings" />
 
-	<a href="/download/menu.pdf" target="_blank">
-		<Button color="#5177FF" shadow="#5177FF55" hover="#405ec9">View as PDF</Button>
-	</a>
+	<div class="centered-container toppings">
+		<div class="menu-listing">
+			<div class="menu-head">
+				<h1>Tapioca Pearls</h1>
+			</div>
+			<img src="/assets/img/boba.webp" alt="Tapioca pearls" />
+		</div>
+		<div class="menu-listing">
+			<div class="menu-head">
+				<h1>Tapioca Pearls</h1>
+			</div>
+			<div class="menu-items">
+				{#each menu[3].flavors as item}
+					<p>{item}</p>
+				{/each}
+			</div>
+		</div>
+		<div class="menu-listing">
+			<div class="menu-head">
+				<h1>Tapioca Pearls</h1>
+			</div>
+			<div class="menu-items">
+				{#each menu[4].flavors as item}
+					<p>{item}</p>
+				{/each}
+			</div>
+		</div>
+		<div class="menu-listing">
+			<div class="menu-head">
+				<h1>Tapioca Pearls</h1>
+			</div>
+			<div class="menu-items">
+				{#each menu[5].flavors as item}
+					<p>{item}</p>
+				{/each}
+			</div>
+		</div>
+	</div>
+
+	<div class="centered-container">
+		<a href="/download/menu.pdf" target="_blank">
+			<Button color="#5177FF" shadow="#5177FF55" hover="#405ec9">View as PDF</Button>
+		</a>
+	</div>
 </div>
 
 <style>
@@ -96,11 +134,14 @@
 		color: #2dc86f;
 	}
 
-	.price-section {
+	.centered-container {
 		display: flex;
 		width: 100%;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.price-section {
 		padding: 4rem;
 	}
 
@@ -110,6 +151,19 @@
 		justify-content: flex-start;
 		padding: 2rem;
 		height: 22.5rem;
+	}
+
+	.toppings > .menu-listing > .menu-head h1 {
+		font-size: 1.125rem;
+	}
+
+	.toppings > .menu-listing > .menu-head {
+		justify-content: center;
+	}
+
+	.toppings > .menu-listing {
+		text-align: center;
+		width: 25%;
 	}
 
 	.menu-head h1 {
@@ -124,6 +178,7 @@
 
 	.menu-listing {
 		width: 100%;
+		height: 100%;
 		padding-left: 2rem;
 		/* border-left: 0.25rem solid transparent; */
 	}

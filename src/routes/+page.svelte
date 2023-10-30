@@ -21,7 +21,7 @@
 			</a>
 		</div>
 		<div class="right">
-			<img class="image" src="drink.png" alt="boba drink." draggable="false" />
+			<img class="image" src="/assets/img/drink.png" alt="boba drink." draggable="false" />
 		</div>
 	</div>
 	<Separator />
@@ -33,7 +33,7 @@
 		time.
 	</p>
 	<div class="reel-container">
-		<img class="image-2" src="reel.webp" alt="reel of boba drinks." />
+		<img class="image-2" src="/assets/img/reel.webp" alt="reel of boba drinks." />
 	</div>
 	<h3 class="title-3 text-center">Reviews <span class="text-brown">&</span> Ratings</h3>
 	<div class="reviews">

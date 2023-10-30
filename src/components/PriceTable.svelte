@@ -15,7 +15,7 @@
 			<td class="price">$4.60</td>
 		</tr>
 		<tr>
-			<td class="name">Milk Tea Flavored</td>
+			<td class="name">Flavored Milk Tea</td>
 			<td class="price"><i class="icon fa-solid fa-minus" /></td>
 			<td class="price">$4.50</td>
 			<td class="price">$5.00</td>
