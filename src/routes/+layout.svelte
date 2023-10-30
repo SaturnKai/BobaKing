@@ -27,5 +27,6 @@
 <style>
 	main {
 		min-height: 80vh;
+		padding: 2rem;
 	}
 </style>
