@@ -31,7 +31,16 @@
 </div>
 
 <footer class="footer">
-	<div class="container"></div>
+	<div class="container" style="justify-content:flex-start">
+		<a
+			class="link"
+			href="https://github.com/SaturnKai/BobaKing"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i class="icon icon-2 fa-brands fa-github" />
+		</a>
+	</div>
 	<div class="container" style="width: 100%">
 		<button class="facts" on:click={() => randomFact()}>
 			<h1>Did you know?</h1>
@@ -41,7 +50,7 @@
 	<div class="container" style="justify-content:flex-end">
 		<a
 			class="link"
-			href="https://www.instagram.com/bobakingvegas/"
+			href="https://www.instagram.com/bobakingvegas"
 			target="_blank"
 			rel="noopener noreferrer"
 		>
@@ -57,7 +66,7 @@
 	}
 
 	.footer > .container {
-		display:flex;
+		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
@@ -122,6 +131,10 @@
 	}
 
 	.icon:hover {
-		color: #d0adf0;
+		color: #ac78dd;
+	}
+
+	.icon-2:hover {
+		color: #fff;
 	}
 </style>
