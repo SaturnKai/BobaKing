@@ -8,22 +8,22 @@
 	<title>Boba King | Home</title>
 </svelte:head>
 
-<div class="introduction">
-	<div class="left">
-		<h1 class="title">Best Boba in <span class="text-yellow">Vegas</span></h1>
-		<p class="description">
-			With over <span class="text-green">6 locations</span>, we server the highest quality boba tea
-			in the valley.
-		</p>
-		<a class="menu-button" href="/menu">
-			<Button color="#ff5151" shadow="#ff3a3a55" hover="#e44747">View Menu</Button>
-		</a>
-	</div>
-	<div class="right">
-		<img class="image" src="drink.png" alt="boba drink." draggable="false" />
-	</div>
-</div>
 <div class="main-content">
+	<div class="introduction">
+		<div class="left">
+			<h1 class="title">Best Boba in <span class="text-yellow">Vegas</span></h1>
+			<p class="description">
+				With over <span class="text-green">6 locations</span>, we server the highest quality boba
+				tea in the valley.
+			</p>
+			<a class="menu-button" href="/menu">
+				<Button color="#ff5151" shadow="#ff3a3a55" hover="#e44747">View Menu</Button>
+			</a>
+		</div>
+		<div class="right">
+			<img class="image" src="drink.png" alt="boba drink." draggable="false" />
+		</div>
+	</div>
 	<Separator />
 	<h2 class="title-2">What Is Boba?</h2>
 	<p class="description text-center">
@@ -53,12 +53,13 @@
 	.introduction {
 		display: flex;
 		justify-content: space-between;
-		margin-top: 60px;
-		margin-inline: 180px;
+		align-items: center;
+		/* margin-top: 20px; */
+		/* margin-inline: 180px; */
 	}
 
 	.image {
-		width: 400px;
+		width: 450px;
 	}
 
 	.left {
@@ -85,20 +86,20 @@
 
 	.main-content {
 		margin: 0 auto;
-		margin-top: 60px;
-		max-width: 1100px;
+		/* margin-top: 10px; */
+		max-width: 1300px;
 		margin-bottom: 80px;
 	}
 
 	.title-2 {
 		font-size: 1.8rem;
 		text-align: center;
-		margin-top: 80px;
+		margin-top: 100px;
 	}
 
 	.title-3 {
 		font-size: 1.4rem;
-		margin-top: 80px;
+		margin-top: 100px;
 	}
 
 	.reviews {

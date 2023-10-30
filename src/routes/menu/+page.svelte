@@ -42,14 +42,14 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="menu-section">
 		<img src="/assets/img/slush.webp" alt="Thai Milk Tea" />
 		<div class="menu-listing">
 			<div class="menu-head">
 				<h1>{menu[2].name}</h1>
 				<h1 style="padding: 0 1rem 0 1rem;color:#393042;">/</h1>
-				<h1 class="separated"> Milk Blend</h1>
+				<h1 class="separated">Milk Blend</h1>
 			</div>
 			<div class="menu-items">
 				{#each menu[2].flavors as item}
@@ -58,7 +58,6 @@
 			</div>
 		</div>
 	</div>
-
 </div>
 
 <style>
@@ -123,10 +122,14 @@
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		gap: 0.40rem;
+		gap: 0.4rem;
 		height: calc(100% - 2rem);
 		color: #fff;
 		font-weight: 600;
 		padding: 0.5rem;
+	}
+
+	.menu-items > p {
+		line-height: 1.5;
 	}
 </style>
