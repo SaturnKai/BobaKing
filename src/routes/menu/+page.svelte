@@ -19,6 +19,8 @@
 		<PriceTable />
 	</div>
 
+	<Separator text="Drinks" />
+
 	<div class="menu-section">
 		<img src="/assets/img/milktea.webp" alt="Thai Milk Tea" />
 		<div class="menu-listing">
@@ -60,7 +62,7 @@
 		</div>
 	</div>
 
-	<Separator />
+	<Separator text="Toppings" />
 </div>
 
 <style>
