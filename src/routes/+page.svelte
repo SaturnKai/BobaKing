@@ -31,7 +31,9 @@
 		store, you can become overwhelmed by the varieties of bobas. We have the popular bobas on the
 		market explained, so you don't get panicked when you order a bubble tea drink next time.
 	</p>
-	<img class="image-2" src="reel.webp" alt="reel of boba drinks." />
+	<div class="reel-container">
+		<img class="image-2" src="reel.webp" alt="reel of boba drinks." />
+	</div>
 	<h3 class="title-3 text-center">Reviews <span class="text-brown">&</span> Ratings</h3>
 	<div class="reviews">
 		<Review
@@ -63,8 +65,13 @@
 		width: 450px;
 	}
 
+	.reel-container {
+		display: flex;
+		justify-content: center;
+	}
+
 	.image-2 {
-		width: 1400px;
+		width: 100%;
 		margin: 0 auto;
 		border-radius: 20px;
 		margin-top: 40px;
