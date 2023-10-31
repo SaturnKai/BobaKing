@@ -1,7 +1,9 @@
 {
 	"name": "boba-king",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"private": true,
+	"license": "MIT",
+	"description": "A mockup redesign of Boba King's website.",
 	"authors": [
 		{
 			"name": "Brandon",

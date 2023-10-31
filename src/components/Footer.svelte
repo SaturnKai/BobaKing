@@ -92,12 +92,14 @@
 	}
 
 	.icon-splash .fa-solid {
-		transition: 0.25s ease;
+		transition-timing-function: cubic-bezier(0, 0.2, 0, 1.48);
+		transition: 200ms ease;
 	}
 
 	.icon-splash .fa-solid:hover {
 		transform: translateY(-0.25rem);
-		color: #393042;
+		text-shadow: 0px 12px 20px #ca9b4255;
+		color: #ca9b42;
 	}
 
 	.facts {

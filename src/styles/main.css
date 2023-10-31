@@ -16,3 +16,16 @@ body {
 :root {
 	color-scheme: dark;
 }
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #60586d;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #443f4d;
+}
